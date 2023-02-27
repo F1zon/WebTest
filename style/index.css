@@ -43,6 +43,8 @@ body {
 ._container {
     max-width: 1570px;
     margin: 0px auto;
+    padding: 0 20px;
+    box-sizing: content-box;
 }
 /* -------------ШАПКА------------------ */
 .header {
@@ -56,7 +58,9 @@ body {
     display: flex;
     min-height: 165px;
     align-items: center;
-    box-sizing: content-box;
+}
+.header__logo_img {
+    margin: 0 10px 0 0;
 }
 .header__logo {
     font-size: 24px;
@@ -89,6 +93,6 @@ body {
 }
 @media (max-width: 479px) {
     .menu_link {
-        
+        font-size: 16px;
     }
 }
