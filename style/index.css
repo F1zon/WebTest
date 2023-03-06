@@ -43,7 +43,7 @@ body {
 ._container {
     max-width: 1570px;
     margin: 0px auto;
-    padding: 0 20px;
+    padding: 0 50px;
     box-sizing: content-box;
 }
 /* -------------ШАПКА------------------ */
@@ -54,6 +54,31 @@ body {
     top: 0;
     z-index: 50;
 }
+.runningLine {
+    display: flex;
+    width: 200%;
+
+    color: white;
+    background: linear-gradient(89.74deg, rgba(255, 255, 255, 0.8) 1.92%, rgba(0, 160, 210, 0.8) 73.7%);
+}
+.rl_item {
+    display: flex;
+    animation: runLine 60s linear infinite;
+}
+.runningLine h1 {
+    white-space: nowrap;
+    font-size: 20px;
+    margin: 5px 80px 5px 80px;
+}
+@keyframes runLine {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
 .header__container {
     display: flex;
     min-height: 165px;
@@ -84,15 +109,26 @@ body {
     flex-wrap: wrap;
 }
 .menu__item {
-    margin: 5px 0 0 58px;
+    margin: 5px 0 40px 58px;
 }
 .menu_link {
     color: #1092FF;
     line-height: calc(18 / 16 * 100%);
     font-weight: 900;
+
+    border: 2px solid #8AD1FF;
+    background: #1093ff00;
+    border-radius: 40px;
 }
 @media (max-width: 479px) {
     .menu_link {
         font-size: 16px;
     }
 }
+@media (max-width: 1920px) {
+    .menu_link {
+        width: 160px;
+        font-size: 19px;
+    }
+}
+
